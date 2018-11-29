@@ -1,0 +1,18 @@
+<div>
+  <mat-form-field  class="full-width">
+    <input matInput type="number" placeholder="Valor do imóvel" [(ngModel)]="financiamento.valorImovel"/>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input matInput type="number" max="540" placeholder="Quantidade de Parcelas" [(ngModel)]="financiamento.qtdParcelas"/>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input matInput type="number" max="100" placeholder="Juros (% a.a)" [(ngModel)]="financiamento.juros"/>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input matInput type="number" placeholder="% de Entrada" [(ngModel)]="financiamento.percEntrada"/>
+  </mat-form-field>
+  <button class="full-width" mat-raised-button color="primary" (click)="simular()">Simular</button>
+</div>
+<div *ngIf="showTable">
+  <app-tabela></app-tabela>
+</div>
