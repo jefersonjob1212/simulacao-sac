@@ -1,4 +1,4 @@
-<table class="full-width" mat-table [dataSource]="dataSourceTable" matSort>
+<table class="full-width" mat-table [dataSource]="dataSourceTable | async" matSort>
   <ng-container matColumnDef="numero">
     <th mat-header-cell *matHeaderCellDef>Parcela Nº.</th>
     <td mat-cell *matCellDef="let parcela">{{ parcela.numero }}</td>
@@ -8,7 +8,7 @@
     <td mat-cell *matCellDef="let parcela">{{ parcela.vencimento | date:'dd/MM/yyyy' }}</td>
   </ng-container>
   <ng-container matColumnDef="valor">
-    <th mat-header-cell *matHeaderCellDef>Parcela Nº.</th>
+    <th mat-header-cell *matHeaderCellDef>Valor</th>
     <td mat-cell *matCellDef="let parcela">{{ parcela.valor | currency:'BRL':true }}</td>
   </ng-container>
 

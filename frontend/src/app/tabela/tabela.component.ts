@@ -23,7 +23,11 @@ export class TabelaComponent implements OnInit {
   }
 
   simular(financiamento: Financiamento) {
+    //console.log(financiamento);
     this.simulacaoService.simular(financiamento).subscribe(lis => {
+
+      console.log(lis);
+      //this.dataSourceTable = new MatTableDataSource(lis);
       this.dataSourceTable = new MatTableDataSource(lis);
       this.dataSourceTable.sort = this.sort;
       this.dataSourceTable.paginator = this.paginator;

@@ -19,6 +19,7 @@ export class SimulacaoComponent implements OnInit {
   }
 
   simular() {
+    //console.log(this.financiamento);
     this.tabelaComponent.simular(this.financiamento);
     this.showTable = true;
   }
